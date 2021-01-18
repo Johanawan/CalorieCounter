@@ -2,6 +2,8 @@
 
 A landing page for a subscribe to newsletter form. First time using deploying with Node.js. Using MailChimp API to capture email addresses.
 
+Link: https://startup-launch.herokuapp.com/
+
 What I learnt:
 - Connecting MailChimp API to capture emails
 - Node.js to build a simple web application.
