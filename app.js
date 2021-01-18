@@ -2,6 +2,9 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const request = require("request");
 
+// dotenv to hide API key.
+require('dotenv').config()
+
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}))
@@ -34,9 +37,12 @@ app.post("/", function(req, res) {
 
     const url = "https://us7.api.mailchimp.com/3.0/lists/163aa671e6"
 
+    api_key = process.env.API_KEY
+    auth_join = "johan:" + String(api_key)
+
     const options = {
         method: "POST",
-        auth: "johan:fcb6b7bf1022eac7346e1be03c650514-us7"
+        auth: auth_join,
     }
 
     const request = https.request(url, options, function(response) {
@@ -48,7 +54,7 @@ app.post("/", function(req, res) {
         }
 
         response.on("data", function(data) {
-            console.log(JSON.parse(data));
+            
         })
     })
 
