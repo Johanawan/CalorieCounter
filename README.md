@@ -1,4 +1,4 @@
-# Subscribe-Newsletter
+# Subscribe Newsletter
 
 A landing page for a subscribe to newsletter form. First time using deploying with Node.js. Using MailChimp API to capture email addresses.
 
